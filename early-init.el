@@ -14,7 +14,7 @@
 ;;; Code:
 
 ;; Debugging for the setting update.
-(setq debug-on-error nil)
+(setq debug-on-error t)
 
 (when init-file-debug
   (profiler-start 'cpu)
@@ -35,6 +35,14 @@
 ;; Prevent unwanted run-time compilation for native-comp users
 (when (>= emacs-major-version 29)
   (setq inhibit-automatic-native-compilation nil))
+
+;; TEMPORARY: let Emacs start without GPG
+(setq package-check-signature nil)
+
+;; Lisp error: (epg-error "no usable configuration" OpenPGP)
+(require 'epa-file)
+(custom-set-variables '(epg-gpg-program  "/opt/homebrew/bin/gpg"))
+;(epa-file-enable)
 
 ;; Suppress a second case-insensitive search through the auto-mode-alist
 (setq auto-mode-case-fold nil)

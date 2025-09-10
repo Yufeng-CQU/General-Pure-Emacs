@@ -63,7 +63,7 @@
 ;; manage by git and disable make-backup-files and auto-save-default
 (with-no-warnings
   (setq make-backup-files nil)
-  (setq auto-save-default nil)
+  ;; (setq auto-save-default nil)
   (delete-selection-mode 1)
   (setq tab-width 4)
   (fset 'yes-or-no-p 'y-or-n-p)
@@ -83,7 +83,7 @@
       inhibit-compacting-font-caches t                                           ; Don’t compact font caches during GC
       delete-by-moving-to-trash t                                                ; Deleting files go to OS's trash folder
       make-backup-files nil                                                      ; Forbide to make backup files
-      auto-save-default nil                                                      ; Disable auto save
+      ;; auto-save-default nil                                                      ; Disable auto save
 
       uniquify-buffer-name-style 'post-forward-angle-brackets                    ; Show path if names are same
       adaptive-fill-regexp "[ t]+|[ t]*([0-9]+.|*+)[ t]*"
@@ -117,14 +117,14 @@
 (use-package hide-mode-line
   :ensure t)
 ;;--------------------------------------------------------------------
-(use-package auto-save
-  :ensure nil
-  :load-path "site-lisp/auto-save"
-  :hook (find-file-hook . auto-save-enable)
-  :config
-  (auto-save-idle 1)
-  (auto-save-silent t)
-  (auto-save-delete-trailing-whitespace t))
+;; (use-package auto-save
+;;   ;; :ensure nil
+;;   :load-path "site-lisp/auto-save"
+;;   :hook (find-file-hook . auto-save-enable)
+;;   :config
+;;   (auto-save-idle 1)
+;;   (auto-save-silent t)
+;;   (auto-save-delete-trailing-whitespace t))
 
 ;;--------------------------------------------------------------------
 ;; Yet another snippet extension
