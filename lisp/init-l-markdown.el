@@ -119,6 +119,7 @@ mermaid.initialize({
           (eglot--manage-mode 1))
          (t
           (apply fn args)))))))
+
 ;;-------------------------------------------------------------------------------------------------
 (provide 'init-l-markdown)
 ;;;init-l-markdown ends here

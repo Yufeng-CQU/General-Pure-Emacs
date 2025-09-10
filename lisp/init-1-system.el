@@ -36,6 +36,9 @@
     :config (setq exec-path-from-shell-check-startup-files nil)
     :hook (after-init . exec-path-from-shell-initialize)))
 
+;; Example Linux/mac path:
+(setq epg-gpg-program "/opt/homebrew/bin/gpg")
+
 ;;--------------------------------------------------------------------
 ;; A few more useful configurations...
 (use-package emacs
