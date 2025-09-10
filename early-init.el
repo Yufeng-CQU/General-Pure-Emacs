@@ -39,6 +39,7 @@
 ;; TEMPORARY: let Emacs start without GPG
 (setq package-check-signature nil)
 
+;; update to Emacs 30
 ;; Lisp error: (epg-error "no usable configuration" OpenPGP)
 ;; (require 'epa-file)
 (custom-set-variables '(epg-gpg-program  "/opt/homebrew/bin/gpg"))
