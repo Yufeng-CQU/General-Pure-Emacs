@@ -40,7 +40,7 @@
 (setq package-check-signature nil)
 
 ;; Lisp error: (epg-error "no usable configuration" OpenPGP)
-(require 'epa-file)
+;; (require 'epa-file)
 (custom-set-variables '(epg-gpg-program  "/opt/homebrew/bin/gpg"))
 ;(epa-file-enable)
 
